@@ -18,18 +18,30 @@ class HomeActivity : AppCompatActivity() {
         addOpenFiltersFragRequestObserver()
         addOpenQuesDescFragRequestObserver()
 
-        GlobalUtils.openFragment(R.id.fragment_container, QuestionsListFragment.instance(), supportFragmentManager)
+        GlobalUtils.openFragment(
+            R.id.fragment_container,
+            QuestionsListFragment.instance(),
+            supportFragmentManager
+        )
     }
 
     private fun addOpenQuesDescFragRequestObserver() {
         viewModel.openQuesDescFrag.observe(this, {
-            GlobalUtils.openFragmentWithStack(R.id.fragment_container, QuestionDescFragment.instance(), supportFragmentManager)
+            GlobalUtils.openFragmentWithStack(
+                R.id.fragment_container,
+                QuestionDescFragment.instance(),
+                supportFragmentManager
+            )
         })
     }
 
     private fun addOpenFiltersFragRequestObserver() {
         viewModel.openFiltersFrag.observe(this, {
-            GlobalUtils.openFragmentWithStack(R.id.fragment_container, FilterListFragment.instance(), supportFragmentManager)
+            GlobalUtils.openFragmentWithStack(
+                R.id.fragment_container,
+                FilterListFragment.instance(),
+                supportFragmentManager
+            )
         })
     }
 

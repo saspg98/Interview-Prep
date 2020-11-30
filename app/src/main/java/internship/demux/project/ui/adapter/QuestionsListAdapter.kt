@@ -13,14 +13,14 @@ import internship.demux.project.util.GlobalUtils
 import java.util.*
 
 class QuestionsListAdapter(
-        private val context: Activity,
-        private val quesList: List<Question>,
-        private val mListener: OnItemClickListener
+    private val context: Activity,
+    private val quesList: List<Question>,
+    private val mListener: OnItemClickListener
 ) :
-        RecyclerView.Adapter<QuestionsListAdapter.ViewHolder>() {
+    RecyclerView.Adapter<QuestionsListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
-            ViewHolder(LayoutInflater.from(context).inflate(R.layout.card_ques, parent, false))
+        ViewHolder(LayoutInflater.from(context).inflate(R.layout.card_ques, parent, false))
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val pos = holder.adapterPosition;
@@ -31,7 +31,7 @@ class QuestionsListAdapter(
     override fun getItemCount() = quesList.size
 
     class ViewHolder internal constructor(itemView: View) :
-            RecyclerView.ViewHolder(itemView) {
+        RecyclerView.ViewHolder(itemView) {
 
         private var title: TextView = itemView.findViewById(R.id.ques_heading)
         private var trending: ImageView = itemView.findViewById(R.id.trending)
@@ -52,12 +52,12 @@ class QuestionsListAdapter(
         }
 
         private fun getDrawable(quesDiff: String): Int? =
-                when (GlobalUtils.format(quesDiff)) {
-                    "easy" -> R.drawable.tag_easy
-                    "medium" -> R.drawable.tag_medium
-                    "hard" -> R.drawable.tag_difficult
-                    else -> null
-                }
+            when (GlobalUtils.format(quesDiff)) {
+                "easy" -> R.drawable.tag_easy
+                "medium" -> R.drawable.tag_medium
+                "hard" -> R.drawable.tag_difficult
+                else -> null
+            }
     }
 
     interface OnItemClickListener {

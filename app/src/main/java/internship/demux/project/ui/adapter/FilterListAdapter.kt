@@ -16,14 +16,16 @@ import internship.demux.project.R
 import java.util.*
 
 class FilterListAdapter(
-        private val context: Activity,
-        private val filterList: List<Pair<String, List<String>>>,
-        private val filtersSelected: HashMap<String, HashSet<String>>,
-        private val mListener: OnCheckBoxClickListener
+    private val context: Activity,
+    private val filterList: List<Pair<String, List<String>>>,
+    private val filtersSelected: HashMap<String, HashSet<String>>,
+    private val mListener: OnCheckBoxClickListener
 ) : RecyclerView.Adapter<FilterListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
-            ViewHolder(LayoutInflater.from(context).inflate(R.layout.card_filter_category, parent, false))
+        ViewHolder(
+            LayoutInflater.from(context).inflate(R.layout.card_filter_category, parent, false)
+        )
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val pos = holder.adapterPosition;
@@ -43,14 +45,18 @@ class FilterListAdapter(
     override fun getItemCount() = filterList.size
 
     class ViewHolder internal constructor(itemView: View) :
-            RecyclerView.ViewHolder(itemView) {
+        RecyclerView.ViewHolder(itemView) {
 
         private var filterCategory: ViewGroup = itemView.findViewById(R.id.filter_category)
         private var filterHeading: TextView = itemView.findViewById(R.id.filter_heading)
         var filterOptionsGrp: LinearLayout = itemView.findViewById(R.id.filter_options_grp)
         private var arrow: AppCompatImageButton = itemView.findViewById(R.id.bt_arrow)
 
-        fun bindView(context: Context, filter: Pair<String, List<String>>, filtersSelected: HashMap<String, HashSet<String>>) {
+        fun bindView(
+            context: Context,
+            filter: Pair<String, List<String>>,
+            filtersSelected: HashMap<String, HashSet<String>>
+        ) {
             addFilterOptions(context, filter, filtersSelected)
             arrow.setImageResource(R.drawable.ic_baseline_expand_more_24)
             arrow.setOnClickListener {
@@ -65,13 +71,20 @@ class FilterListAdapter(
             }
         }
 
-        private fun addFilterOptions(context: Context, filter: Pair<String, List<String>>, filtersSelected: HashMap<String, HashSet<String>>) {
+        private fun addFilterOptions(
+            context: Context,
+            filter: Pair<String, List<String>>,
+            filtersSelected: HashMap<String, HashSet<String>>
+        ) {
             filterHeading.text = filter.first.capitalize(Locale.ROOT)
             for (option in filter.second) {
                 filterOptionsGrp.addView(AppCompatCheckBox(context).apply {
                     text = option.capitalize(Locale.ROOT)
                     isChecked = filtersSelected[filter.first]?.contains(option) ?: false
-                    layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+                    layoutParams = ViewGroup.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                    )
                 })
             }
         }

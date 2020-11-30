@@ -24,15 +24,23 @@ class HomeActivityViewModel : ViewModel() {
     val openQues: LiveData<List<Any>> get() = _openQues
     fun openQues(question: Question) {
         val parsedQues = ArrayList<Pair<String, String>>().apply {
-            add(Pair("related topics", question.topics.joinToString(separator = ",") { " ${it.capitalize(Locale.ROOT)}" }))
-            add(Pair("companies", question.companies.joinToString(separator = ",") { " ${it.capitalize(Locale.ROOT)}" }))
+            add(
+                Pair(
+                    "related topics",
+                    question.topics.joinToString(separator = ",") { " ${it.capitalize(Locale.ROOT)}" })
+            )
+            add(
+                Pair(
+                    "companies",
+                    question.companies.joinToString(separator = ",") { " ${it.capitalize(Locale.ROOT)}" })
+            )
             add(Pair("link", question.link))
         }
         _openQues.value = listOf(
-                GlobalUtils.format(question.title).capitalize(Locale.ROOT),
-                GlobalUtils.format(question.difficulty).capitalize(Locale.ROOT),
-                question.trending,
-                parsedQues
+            GlobalUtils.format(question.title).capitalize(Locale.ROOT),
+            GlobalUtils.format(question.difficulty).capitalize(Locale.ROOT),
+            question.trending,
+            parsedQues
         )
     }
 
@@ -58,7 +66,13 @@ class HomeActivityViewModel : ViewModel() {
             lFiltersSelected = filters
             _filteredQues.value = allQues?.filter {
                 it.topics.any { topic -> filters["topics"]?.contains(GlobalUtils.format(topic)) != false } &&
-                        it.companies.any { company -> filters["companies"]?.contains(GlobalUtils.format(company)) != false } &&
+                        it.companies.any { company ->
+                            filters["companies"]?.contains(
+                                GlobalUtils.format(
+                                    company
+                                )
+                            ) != false
+                        } &&
                         filters["difficulty"]?.contains(GlobalUtils.format(it.difficulty)) != false &&
                         if (filters["other tags"]?.contains("trending") == true) {
                             it.trending

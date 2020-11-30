@@ -31,7 +31,11 @@ class GlobalUtils {
          * @param manager: Fragment Manager to create the requested fragment.
          *
          */
-        fun openFragmentWithStack(containerViewId: Int, fragment: Fragment, manager: FragmentManager) {
+        fun openFragmentWithStack(
+            containerViewId: Int,
+            fragment: Fragment,
+            manager: FragmentManager
+        ) {
             val transaction = manager.beginTransaction()
             transaction.replace(containerViewId, fragment, fragment.tag)
             transaction.addToBackStack(null)
@@ -50,10 +54,31 @@ class GlobalUtils {
 
         fun prepFilters(): List<Pair<String, List<String>>> {
             return listOf(
-                    Pair("companies", listOf("amazon", "microsoft", "adobe", "google", "uber", "facebook", "oracle")),
-                    Pair("topics", listOf("binary search", "dynamic programming", "recursion", "backtracking", "depth-first search", "breadth-first search", "Union find", "string", "math", "hash table", "linked list", "array", "heap", "divide and conquer")),
-                    Pair("difficulty", listOf("easy", "medium", "hard")),
-                    Pair("other tags", listOf("trending"))
+                Pair(
+                    "companies",
+                    listOf("amazon", "microsoft", "adobe", "google", "uber", "facebook", "oracle")
+                ),
+                Pair(
+                    "topics",
+                    listOf(
+                        "binary search",
+                        "dynamic programming",
+                        "recursion",
+                        "backtracking",
+                        "depth-first search",
+                        "breadth-first search",
+                        "Union find",
+                        "string",
+                        "math",
+                        "hash table",
+                        "linked list",
+                        "array",
+                        "heap",
+                        "divide and conquer"
+                    )
+                ),
+                Pair("difficulty", listOf("easy", "medium", "hard")),
+                Pair("other tags", listOf("trending"))
             )
         }
 

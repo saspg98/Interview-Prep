@@ -25,9 +25,9 @@ class QuestionDescFragment : Fragment() {
     private lateinit var trending: ImageView
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_ques_desc, container, false)
     }
@@ -54,7 +54,8 @@ class QuestionDescFragment : Fragment() {
             } else {
                 trending.visibility = View.GONE
             }
-            quesDescAdapter = QuestionDescAdapter(mContext, response[3] as List<Pair<String, String>>)
+            quesDescAdapter =
+                QuestionDescAdapter(mContext, response[3] as List<Pair<String, String>>)
             recyclerView.adapter = quesDescAdapter
         })
     }

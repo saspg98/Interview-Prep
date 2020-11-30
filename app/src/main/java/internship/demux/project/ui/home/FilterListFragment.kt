@@ -24,9 +24,9 @@ class FilterListFragment : Fragment(), FilterListAdapter.OnCheckBoxClickListener
     private lateinit var filterListAdapter: FilterListAdapter
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_filter_options, container, false)
     }

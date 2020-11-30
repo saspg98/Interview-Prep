@@ -16,12 +16,12 @@ import internship.demux.project.util.GlobalUtils
 import java.util.*
 
 class QuestionDescAdapter(
-        private val context: Activity,
-        private val quesSubPartsList: List<Pair<String, String>>
+    private val context: Activity,
+    private val quesSubPartsList: List<Pair<String, String>>
 ) :
-        RecyclerView.Adapter<QuestionDescAdapter.ViewHolder>() {
+    RecyclerView.Adapter<QuestionDescAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
-            ViewHolder(LayoutInflater.from(context).inflate(R.layout.card_ques_sp, parent, false))
+        ViewHolder(LayoutInflater.from(context).inflate(R.layout.card_ques_sp, parent, false))
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindView(quesSubPartsList[position], position)
@@ -38,10 +38,13 @@ class QuestionDescAdapter(
 
         fun bindView(pair: Pair<String, String>, position: Int) {
             spTitle.text = GlobalUtils.format(pair.first).capitalize(Locale.ROOT)
-            if(position == 2) {
+            if (position == 2) {
                 spValue.isClickable = true
                 spValue.movementMethod = LinkMovementMethod.getInstance()
-                spValue.text = Html.fromHtml("<a href='${pair.second}'>${pair.second}</a>", Html.FROM_HTML_MODE_COMPACT)
+                spValue.text = Html.fromHtml(
+                    "<a href='${pair.second}'>${pair.second}</a>",
+                    Html.FROM_HTML_MODE_COMPACT
+                )
             } else {
                 spValue.text = pair.second
             }

@@ -23,9 +23,9 @@ class QuestionsListFragment : Fragment(), QuestionsListAdapter.OnItemClickListen
     private lateinit var listAdapter: QuestionsListAdapter
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_ques_list, container, false)
     }
@@ -49,7 +49,8 @@ class QuestionsListFragment : Fragment(), QuestionsListAdapter.OnItemClickListen
     private fun addFilteredQuesListObserver() {
         viewModel.filteredQues.observe(viewLifecycleOwner, { response ->
             if (response.isNullOrEmpty()) {
-                Toast.makeText(context, getString(R.string.question_empty), Toast.LENGTH_LONG).show()
+                Toast.makeText(context, getString(R.string.question_empty), Toast.LENGTH_LONG)
+                    .show()
             }
             listAdapter = QuestionsListAdapter(mContext, response, this)
             recyclerView.adapter = listAdapter
@@ -62,7 +63,8 @@ class QuestionsListFragment : Fragment(), QuestionsListAdapter.OnItemClickListen
                 listAdapter = QuestionsListAdapter(mContext, response, this)
                 recyclerView.adapter = listAdapter
             } else {
-                Toast.makeText(context, getString(R.string.question_empty), Toast.LENGTH_LONG).show()
+                Toast.makeText(context, getString(R.string.question_empty), Toast.LENGTH_LONG)
+                    .show()
             }
         })
     }
