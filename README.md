@@ -19,4 +19,5 @@ Make note of following configuration for no error build of app
 * Min SDK Version 28
 
 ## Note
-The app is build towards submission of an internship application at Demux and cannot be used for other purpose without permission from owner.
+* The app is build towards submission of an internship application at Demux and cannot be used for other purpose without permission from owner.
+* The app uses a local database in asset folder to show data. Addition of more data could be done in that file in json format. The data added is to just to show the working app and can be replaced by on demand data using api calls etc. with small addition of code of appropiate library.
