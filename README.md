@@ -1,5 +1,5 @@
 # Interview-Prep
-Android App to display the questions asked in this year’s campus placements across India
+Android App to display the questions asked in this year’s campus placements across India [@screenshots](Interview-Prep/screenshots)
 
 ## How to use the app
 * Through apk-debug 
