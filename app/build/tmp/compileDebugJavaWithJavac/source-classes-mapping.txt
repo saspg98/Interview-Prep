@@ -1,0 +1,2 @@
+internship/demux/project/BuildConfig.java
+ internship.demux.project.BuildConfig

@@ -1,0 +1,161 @@
+[
+  {
+    "title": "Copy List with Random Pointer",
+    "companies": [
+      "Microsoft",
+      "Amazon",
+      "Oracle"
+    ],
+    "difficulty": "medium",
+    "topics": [
+      "hash table",
+      "linked list"
+    ],
+    "link": "https://leetcode.com/problems/copy-list-with-random-pointer/",
+    "trending": true
+  },
+  {
+    "title": "Integer to English Words",
+    "companies": [
+      "Microsoft"
+    ],
+    "difficulty": "hard",
+    "topics": [
+      "math",
+      "string"
+    ],
+    "link": "https://leetcode.com/problems/integer-to-english-words/",
+    "trending": false
+  },
+  {
+    "title": "Number of Islands",
+    "companies": [
+      "Amazon",
+      "google"
+    ],
+    "difficulty": "medium",
+    "topics": [
+      "depth-first search",
+      "Union find",
+      "breadth-first search"
+    ],
+    "link": "https://leetcode.com/problems/number-of-islands/",
+    "trending": true
+  },
+  {
+    "title": "Two Sum",
+    "companies": [
+      "Amazon",
+      "Microsoft",
+      "google"
+    ],
+    "difficulty": "easy",
+    "topics": [
+      "array",
+      "hash table"
+    ],
+    "link": "https://leetcode.com/problems/two-sum/",
+    "trending": false
+  },
+  {
+    "title": "Merge k Sorted Lists",
+    "companies": [
+      "Microsoft",
+      "Amazon",
+      "google",
+      "oracle"
+    ],
+    "difficulty": "hard",
+    "topics": [
+      "heap",
+      "linked list",
+      "divide and conquer"
+    ],
+    "link": "https://leetcode.com/problems/merge-k-sorted-lists/",
+    "trending": true
+  },
+  {
+    "title": "Longest Valid Parentheses",
+    "companies": [
+      "Uber",
+      "google",
+      "facebook",
+      "amazon"
+    ],
+    "difficulty": "hard",
+    "topics": [
+      "dynamic programming",
+      "string"
+    ],
+    "link": "https://leetcode.com/problems/longest-valid-parentheses/",
+    "trending": true
+  },
+  {
+    "title": "Minimum window substring",
+    "companies": [
+      "Microsoft",
+      "Uber",
+      "amazon",
+      "google"
+    ],
+    "difficulty": "hard",
+    "topics": [
+      "math",
+      "string"
+    ],
+    "link": "https://leetcode.com/problems/minimum-window-substring/",
+    "trending": true
+  },
+  {
+    "title": "Integer to English Words",
+    "companies": [
+      "Microsoft"
+    ],
+    "difficulty": "hard",
+    "topics": [
+      "math",
+      "string"
+    ],
+    "link": "https://leetcode.com/problems/integer-to-english-words/",
+    "trending": true
+  },
+  {
+    "title": "Integer to English Words",
+    "companies": [
+      "Microsoft"
+    ],
+    "difficulty": "hard",
+    "topics": [
+      "math",
+      "string"
+    ],
+    "link": "https://leetcode.com/problems/integer-to-english-words/",
+    "trending": true
+  },
+  {
+    "title": "Integer to English Words",
+    "companies": [
+      "Microsoft"
+    ],
+    "difficulty": "hard",
+    "topics": [
+      "math",
+      "string"
+    ],
+    "link": "https://leetcode.com/problems/integer-to-english-words/",
+    "trending": true
+  },
+  {
+    "title": "Integer to English Words",
+    "companies": [
+      "Microsoft"
+    ],
+    "difficulty": "hard",
+    "topics": [
+      "math",
+      "string"
+    ],
+    "link": "https://leetcode.com/problems/integer-to-english-words/",
+    "trending": true
+  }
+]
